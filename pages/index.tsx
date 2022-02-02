@@ -5,9 +5,9 @@ import SmallCard from '../components/SmallCard'
 import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
+import { FunctionComponent } from 'react'
 
-export default function Home(props) {
-  console.log(props)
+const Home: FunctionComponent = (props?) => {
   return (
     <div className="">
       <Head>
@@ -50,7 +50,6 @@ export default function Home(props) {
     </div>
   )
 }
-
 export async function getStaticProps() {
   const exploreData = await fetch('https://links.papareact.com/pyp').then(
     (res) => res.json()
@@ -65,3 +64,4 @@ export async function getStaticProps() {
     },
   }
 }
+export default Home
