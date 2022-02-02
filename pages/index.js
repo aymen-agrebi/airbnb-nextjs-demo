@@ -7,7 +7,7 @@ import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
 import { FunctionComponent } from 'react'
 
-const Home: FunctionComponent = (props?) => {
+export default function Home(props) {
   return props ? (
     <div className="">
       <Head>
@@ -64,4 +64,3 @@ export async function getStaticProps() {
     },
   }
 }
-export default Home
