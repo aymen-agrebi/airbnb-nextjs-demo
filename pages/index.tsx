@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import { FunctionComponent } from 'react'
 
 const Home: FunctionComponent = (props?) => {
-  return (
+  return props ? (
     <div className="">
       <Head>
         <title>airbnb</title>
@@ -48,7 +48,7 @@ const Home: FunctionComponent = (props?) => {
       </main>
       <Footer />
     </div>
-  )
+  ) : null
 }
 export async function getStaticProps() {
   const exploreData = await fetch('https://links.papareact.com/pyp').then(
