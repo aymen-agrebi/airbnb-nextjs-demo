@@ -6,7 +6,8 @@ import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
 
-export default function Home({ exploreData, cardData }) {
+export default function Home(props) {
+  console.log(props)
   return (
     <div className="">
       <Head>
@@ -19,7 +20,7 @@ export default function Home({ exploreData, cardData }) {
         <section className="pt-6">
           <h2 className="pb-5 text-4xl font-semibold">Explore near by</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-            {exploreData?.map(({ img, distance, location }) => (
+            {props.exploreData?.map(({ img, distance, location }) => (
               <SmallCard
                 key={img}
                 img={img}
@@ -32,7 +33,7 @@ export default function Home({ exploreData, cardData }) {
         <section>
           <h2 className="py-8 text-4xl font-semibold">Live Anywhere</h2>
           <div className="-ml-3 flex space-x-3 overflow-scroll p-3 scrollbar-hide ">
-            {cardData?.map(({ img, title }) => (
+            {props.cardData?.map(({ img, title }) => (
               <MediumCard key={img} title={title} img={img} />
             ))}
           </div>
