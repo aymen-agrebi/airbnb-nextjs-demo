@@ -58,11 +58,9 @@ const Map = ({ searchResults }) => {
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                background: '#fff',
                 zIndex: 100,
                 willChange: 'transform',
                 textAlign: 'center',
-                padding: '5px 0',
               }}
             >
               <div> {res.title}</div>
